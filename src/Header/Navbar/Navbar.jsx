@@ -1,6 +1,21 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { AuthContext } from "../../Provider/AuthProvider";
+import swal from 'sweetalert';
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext)
+    const handleLogout = () => {
+        logout()
+            .then(() => {
+                return swal({
+                    title: "Good job!",
+                    text: "Sign Out Successfully",
+                    icon: "success",
+                });
+            })
+    };
+
+
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/wedding_packages">Wedding Packages</NavLink></li>
@@ -10,7 +25,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar ">
+        <div className="navbar max-w-6xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,7 +35,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Sunshine Wedding</a>
+                <img className="w-32" src="https://i.ibb.co/z7BZBYQ/sunshine-wedding-low-resolution-color-logo.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -28,7 +43,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/signIn"><button className="btn btn-sm">Contact</button></Link>
+                {
+                    user ? <Link to="/signIn"><button onClick={handleLogout} className="btn btn-sm">Logout</button> </Link>: <Link to="/signIn"><button className="btn btn-sm">Contact</button></Link>
+                }
             </div>
         </div>
     );

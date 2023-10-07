@@ -1,15 +1,53 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import swal from 'sweetalert';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const SignUp = () => {
+    const { signUp } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
     const handleSignUpSubmit = (e) => {
         e.preventDefault();
+  
         const name = e.target.name.value;
         const photoUrl = e.target.photoUrl.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const accept = e.target.terms.checked
-        console.log(name,photoUrl,email,password,accept)
+        console.log(name, photoUrl, email, password, accept)
+        if (password.length < 6) {
+            return swal({
+                title: "Error!",
+                text: "Password should be at least 6 characters",
+                icon: "error",
+            });
+        } else if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/.test(password)) {
+            return swal({
+                title: "Error!",
+                text: "Password must contain at least one uppercase letter, one lowercase letter, one digit, and be at least 6 characters long.",
+                icon: "error",
+            });
+        } else if (!accept) {
+            return swal({
+                title: "Error!",
+                text: "Accepted Terms and Conditions",
+                icon: "error",
+            });
+        }
+        signUp(email, password)
+            .then(result => {
+                console.log(result.user)
+                swal("Good job!", "Sign Up Successfully!", "success");
+            })
+            .catch(error => {
+                return swal({
+                    title: "Error!",
+                    text: { error },
+                    icon: "error",
+                });
+            })
 
     }
     return (
@@ -41,7 +79,11 @@ const SignUp = () => {
                     <label className="label">
                         <span className="label-text text-xl">Password</span>
                     </label>
-                    <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                    <div className="flex  relative items-center">
+                        <input type={showPassword ? "text" : "password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+                        <span onClick={() => setShowPassword(!showPassword)} className="absolute right-3">{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</span>
+                    </div>
+
                     <div className="flex gap-3 py-3  text-xl pl-2">
                         <input type="checkbox" name="terms" id="terms" />
                         <label htmlFor="terms"> Accept Terms and Condition</label>

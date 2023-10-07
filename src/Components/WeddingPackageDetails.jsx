@@ -11,7 +11,7 @@ const WeddingPackageDetails = () => {
     const { image, name, price, description, button_text } = packageDetails;
 
     return (
-        <div className="gap-5">
+        <div className="gap-5 max-w-6xl mx-auto">
             <div className="">
                 <img className="rounded-md w-full"  src={image} alt="Album" />
             </div>
