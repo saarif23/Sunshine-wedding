@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import swal from 'sweetalert';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 
 const SignUp = () => {
@@ -52,6 +53,9 @@ const SignUp = () => {
     }
     return (
         <div className="max-w-[500px] mx-auto my-10">
+             <Helmet>
+                <title>Sunshine Wedding | Sign Up </title>
+            </Helmet>
             <form onSubmit={handleSignUpSubmit} className="w-full shadow-2xl space-y-3 rounded-b-lg py-5">
                 <div className="text-center bg-pink-600 px-10 py-6 rounded-t-lg">
                     <h1 className="text-3xl font-extrabold text-white ">Sign Up With Email</h1>

@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import swal from 'sweetalert';
 import { } from 'react-icons/fc';
+import { Helmet } from "react-helmet-async";
 
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -33,6 +34,9 @@ const SignIn = () => {
     };
     return (
         <div className="w-96 mx-auto my-10">
+            <Helmet>
+                <title>Sunshine Wedding | Sign In </title>
+            </Helmet>
             <form onSubmit={handleLoginSubmit} className="w-full shadow-2xl space-y-3 rounded-b-lg py-5">
                 <div className="text-center bg-pink-600 px-10 py-6 rounded-t-lg">
                     <h1 className="text-3xl font-extrabold text-white ">Please Sign In</h1>

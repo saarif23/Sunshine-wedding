@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { BiSolidBadgeDollar } from "react-icons/bi";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -11,7 +12,10 @@ const WeddingPackageDetails = () => {
     const { image, name, price, description, button_text } = packageDetails;
 
     return (
-        <div className="gap-5 max-w-6xl mx-auto">
+        <div className="gap-5 max-w-6xl my-10 mx-auto">
+             <Helmet>
+                <title>Sunshine Wedding | {name} </title>
+            </Helmet>
             <div className="">
                 <img className="rounded-md w-full"  src={image} alt="Album" />
             </div>
