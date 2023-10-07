@@ -5,7 +5,7 @@
       "image": "https://i.ibb.co/LJRSjVZ/Sandy-Beach-Side-Bar-600.jpg",
       "price": "$550",
       "description": "At Southernmost Weddings we know that it can be challenging for you to plan a destination beach wedding in Key West. So, we have a variety of beach wedding packages at beautiful Florida Keys locations all with affordable rates.",
-      "button": "View Details"
+      "button_text": "View Details"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "image": "https://i.ibb.co/qDq3xB4/Private-Sailboat-Side-Bar-600.jpg",
       "price": "$1020",
       "description": "Planning a romantic Key West wedding on the waters of the Gulf of Mexico? Imagine sailing into the sunset as you say I Do and toast the start of your new life together. A wedding cruise on a schooner or catamaran is a great way to get married in Florida.",
-      "button": "View Details"
+      "button_text": "View Details"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "image": "https://i.ibb.co/C6THrV2/Intimate-Garden-Side-Bar-600.jpg",
       "price": "$450",
       "description": "Affordable tropical garden wedding packages at just the right price. Are you looking to get married in a tropical garden in Key West or the Florida Keys, then we have a variety of different garden wedding packages to fit your budget?",
-      "button": "View Details"
+      "button_text": "View Details"
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "image": "https://i.ibb.co/0mDVSXp/Romantic-Elopement-Side-Bar-600.jpg",
       "price": "$980",
       "description": "If you're knee-deep in wedding planning and feeling stressed out or frazzled from juggling all of the decisions, you may be thinking, 'Maybe we should just elope' Given the high cost of a wedding and the ease of eloping, this might be an option worth considering.",
-      "button": "View Details"
+      "button_text": "View Details"
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "image": "https://i.ibb.co/DRqmr7p/Honeymoon-Side-Bar-600.jpg",
       "price": "$2050",
       "description": "ake the guessing game out of wedding & honeymoon planning with our All-Inclusive Wedding Packages, each destination wedding comes with a 3 Nights stay in a Beautiful Award-Winning Hotel or Guesthouse.",
-      "button": "View Details"
+      "button_text": "View Details"
     },
     {
       "id": 6,
@@ -45,7 +45,7 @@
       "image": "https://i.ibb.co/PMHzJc8/Key-West-Weddings-Receptions-Side-Bar-600.jpg",
       "price": "$680",
       "description": "Our wedding planners have created a variety of All-inclusive wedding and reception packages to fit every budget. These packages include everything you need for a stress-free wedding and a delicious dinner, buffet, or cocktail party afterwards.",
-      "button": "View Details"
+      "button_text": "View Details"
     }
   ]
   

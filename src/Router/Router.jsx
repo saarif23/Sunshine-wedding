@@ -5,6 +5,12 @@ import WeddingPackages from "../Pages/WeddingPackages";
 import Event from "../Pages/Event";
 import Photos from "../Pages/Photos";
 import About from "../Pages/About";
+import WeddingPackageDetails from "../Components/WeddingPackageDetails";
+import SignIn from "../Pages/SignIn";
+import SignUp from "../Pages/SignUp";
+
+
+
 
 
 const Router = createBrowserRouter([
@@ -31,6 +37,19 @@ const Router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About></About>
+            },
+            {
+                path: '/weddingPackage/:id',
+                element: <WeddingPackageDetails></WeddingPackageDetails>,
+                loader: () => fetch('data.json')
+            },
+            {
+                path: "/signIn",
+                element: <SignIn></SignIn>
+            },
+            {
+                path: "/signUp",
+                element: <SignUp></SignUp>
             }
 
         ]

@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+       EB_Garamond: "'EB Garamond', serif"
+      }
+    },
     themes: ["light", "dark", "cupcake"],
   },
   plugins: [require("daisyui")],
