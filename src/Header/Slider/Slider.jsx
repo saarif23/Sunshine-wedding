@@ -2,7 +2,7 @@
 
 const Slider = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full lg:h-screen md:h-[400px] h-[300px]">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://i.ibb.co/G3yf0d9/1211.jpg" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

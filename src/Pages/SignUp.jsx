@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import swal from 'sweetalert';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -9,9 +9,11 @@ import { Helmet } from "react-helmet-async";
 const SignUp = () => {
     const { signUp } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
     const handleSignUpSubmit = (e) => {
         e.preventDefault();
-  
+       
+
         const name = e.target.name.value;
         const photoUrl = e.target.photoUrl.value;
         const email = e.target.email.value;
@@ -24,7 +26,7 @@ const SignUp = () => {
                 text: "Password should be at least 6 characters",
                 icon: "error",
             });
-        } else if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/.test(password)) {
+        } else if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/.test(password)) {
             return swal({
                 title: "Error!",
                 text: "Password must contain at least one uppercase letter, one lowercase letter, one digit, and be at least 6 characters long.",
@@ -41,6 +43,8 @@ const SignUp = () => {
             .then(result => {
                 console.log(result.user)
                 swal("Good job!", "Sign Up Successfully!", "success");
+                navigate("/")
+                e.target.reset();
             })
             .catch(error => {
                 return swal({
@@ -53,7 +57,7 @@ const SignUp = () => {
     }
     return (
         <div className="max-w-[500px] mx-auto my-10">
-             <Helmet>
+            <Helmet>
                 <title>Sunshine Wedding | Sign Up </title>
             </Helmet>
             <form onSubmit={handleSignUpSubmit} className="w-full shadow-2xl space-y-3 rounded-b-lg py-5">

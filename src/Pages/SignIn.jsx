@@ -11,7 +11,7 @@ const SignIn = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log("sign  in ", location);
+   
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
@@ -23,19 +23,29 @@ const SignIn = () => {
     }
     const handleLoginSubmit = (e) => {
         e.preventDefault();
+       
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+        if (password.length < 6) {
+            return swal({
+                title: "Error!",
+                text: "Password should be at least 6 characters",
+                icon: "error",
+            });
+        }
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
                 swal("Good job!", "Sign In Successfully!", "success");
+                e.target.reset();
 
                 //navigate after login
                 navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.error(error)
+                swal("Error!", "auth/invalid-login-credentials!", "error");
             })
     };
     return (

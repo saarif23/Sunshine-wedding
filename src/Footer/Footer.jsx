@@ -2,32 +2,32 @@
 
 const Footer = () => {
     return (
-        <footer className="footer py-10 px-20 bg-gray-800 text-white">
-            <aside>
-               <img className="w-36" src="https://i.ibb.co/z7BZBYQ/sunshine-wedding-low-resolution-color-logo.png" alt="sunshine Wedding" />
-                <p>Sunshine Wedding<br />Providing reliable wedding since 2017</p>
-            </aside>
-            <nav>
+        <footer className="grid max-md:grid-cols-1 max-lg:grid-cols-3 max-lg:gap-10 lg:grid-cols-4  py-10 px-20 bg-gray-800 text-white">
+            <div className="max-lg:col-span-3 max-md:col-span-1">
+               <img className="w-36 max-lg:mx-auto" src="https://i.ibb.co/z7BZBYQ/sunshine-wedding-low-resolution-color-logo.png" alt="sunshine Wedding" />
+                <p className="max-lg:text-center">Sunshine Wedding<br />Providing reliable wedding since 2017</p>
+            </div>
+            <div className="max-md:text-center">
                 <header className="footer-title">Services</header>
-                <a className="link link-hover">Wedding Planing</a>
-                <a className="link link-hover">Wedding Packages</a>
-                <a className="link link-hover">Family & Kids Photography</a>
-                <a className="link link-hover">Wedding Photography</a>
-            </nav>
-            <nav>
+                <p className="link link-hover">Wedding Planing</p>
+                <p className="link link-hover">Wedding Packages</p>
+                <p className="link link-hover">Family & Kids Photography</p>
+                <p className="link link-hover">Wedding Photography</p>
+            </div>
+            <div className="max-md:text-center">
                 <header className="footer-title">Company</header>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Career</a>
-                <a className="link link-hover">Press kit</a>
-            </nav>
-            <nav>
+                <p className="link link-hover">About us</p>
+                <p className="link link-hover">Contact</p>
+                <p className="link link-hover">Career</p>
+                <p className="link link-hover">Press kit</p>
+            </div>
+            <div className="max-md:text-center">
                 <header className="footer-title">Legal</header>
-                <a className="link link-hover">License</a>
-                <a className="link link-hover">Terms & Conditions</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">Cookie policy</a>
-            </nav>
+                <p className="link link-hover">License</p>
+                <p className="link link-hover">Terms & Conditions</p>
+                <p className="link link-hover">Privacy policy</p>
+                <p className="link link-hover">Cookie policy</p>
+            </div>
         </footer>
     );
 };
