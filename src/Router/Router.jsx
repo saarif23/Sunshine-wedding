@@ -8,6 +8,8 @@ import About from "../Pages/About";
 import WeddingPackageDetails from "../Components/WeddingPackageDetails";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
+import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -17,6 +19,7 @@ const Router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -40,7 +43,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/weddingPackage/:id',
-                element: <WeddingPackageDetails></WeddingPackageDetails>,
+                element: <PrivateRoute><WeddingPackageDetails></WeddingPackageDetails></PrivateRoute>,
                 loader: () => fetch('data.json')
             },
             {

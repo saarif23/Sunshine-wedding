@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -9,6 +9,9 @@ import { Helmet } from "react-helmet-async";
 const SignIn = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { signIn, googleSignIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log("sign  in ", location);
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
@@ -27,6 +30,9 @@ const SignIn = () => {
             .then(result => {
                 console.log(result.user)
                 swal("Good job!", "Sign In Successfully!", "success");
+
+                //navigate after login
+                navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.error(error)
