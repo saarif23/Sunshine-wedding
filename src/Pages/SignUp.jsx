@@ -68,7 +68,9 @@ const SignUp = () => {
 
     }
     return (
-        <div className="max-w-[500px] mx-auto my-10">
+        <div data-aos="fade-down" data-aos-delay="50"
+        data-aos-duration="1000" 
+         className="max-w-[500px] mx-auto my-10 max-md:px-5">
             <Helmet>
                 <title>Sunshine Wedding | Sign Up </title>
             </Helmet>

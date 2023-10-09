@@ -11,13 +11,13 @@ const SignIn = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-   
+
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user)
                 swal("Good job!", "Sign In Successfully!", "success");
-                  //navigate after login
+                //navigate after login
                 navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
@@ -31,7 +31,7 @@ const SignIn = () => {
     }
     const handleLoginSubmit = (e) => {
         e.preventDefault();
-       
+
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
@@ -57,7 +57,8 @@ const SignIn = () => {
             })
     };
     return (
-        <div className="w-96 mx-auto my-10">
+        <div data-aos="fade-up" data-aos-delay="50"
+            data-aos-duration="1000" className="w-96 mx-auto my-10">
             <Helmet>
                 <title>Sunshine Wedding | Sign In </title>
             </Helmet>
@@ -93,7 +94,7 @@ const SignIn = () => {
                     <span> Do not have an account? <Link to="/signUp" className="text-pink-600 pb-10 font-bold underline">  Sign up</Link> </span>
                 </div>
 
-                <p onClick={handleGoogleSignIn} className="hover:cursor-pointer text-xl text-center ">Continue with Google</p>
+                <p onClick={handleGoogleSignIn} className="hover:cursor-pointer text-xl text-center ">Continue with <span className="text-blue-600 underline font-semibold">Google</span></p>
 
             </form>
 

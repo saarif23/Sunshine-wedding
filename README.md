@@ -60,6 +60,9 @@ https://i.ibb.co/vz3X219/brunette-girl-red-buy-flowers-flower-store.jpg
 https://i.ibb.co/L9gXQMh/bearded-man-his-lovely-bride-pose-snow-magic-winter-forest-Copy.jpg
 https://i.ibb.co/2sD2cCW/young-beautiful-newlyweds-smiling-laughing-sitting-swing-park-1.jpg
 
+`logo`
+https://i.ibb.co/pZnxGzk/logo2.jpg
+https://i.ibb.co/GJsnv3D/logo.jpg
 
 # The Sunshine Wedding Project Features 
 - This project is responsive for small medium and large devices.

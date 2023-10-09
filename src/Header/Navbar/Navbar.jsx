@@ -18,10 +18,9 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/wedding_packages">Wedding Packages</NavLink></li>
         <li><NavLink to="/event">Event</NavLink></li>
-        <li><NavLink to="/photos">Photo Gallery</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
+        {user && <>  <li><NavLink to="/photos">Photo Gallery</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li></>}
     </>
 
     return (
@@ -35,7 +34,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <img className="w-36" src="https://i.ibb.co/z7BZBYQ/sunshine-wedding-low-resolution-color-logo.png" alt="" />
+                <img className="w-36" src="https://i.ibb.co/pZnxGzk/logo2.jpg" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 lg:text-xl">
