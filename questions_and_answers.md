@@ -18,10 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `{}`
 
 <i>Write your explanation here</i>
-
+  The console output is an empty object A:`{}`. In this code  declare a variable called `greeting` and declare a object called `greetign` and console the `greetign` object . the variable `greeting` is not same  as `greetign`. This is two different variables;
 </p>
 </details>
 
