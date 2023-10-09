@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Photos = () => {
     return (
         <div className="grid grid-cols-8 gap-5 max-w-6xl mx-auto max-lg:mx-5">
+            <Helmet>
+                <title>Sunshine Wedding | Photos</title>
+            </Helmet>
             <div className="relative  max-md:col-span-8 md:col-span-5 lg:col-span-2 ">
                 <img className="rounded-lg w-full h-full" src='https://i.ibb.co/0cv9tDx/couple-with-white-blankets-candle.jpg' alt="image-1" />
                 <p className="absolute bottom-5 left-8 font-medium text-white ">Sunshine Wedding <br /> Sandy Beach Wedding </p>

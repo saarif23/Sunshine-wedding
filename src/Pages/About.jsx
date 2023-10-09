@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import OurStory from "../Components/OurStory";
 import OurTeams from "../Components/OurTeams";
 
 const About = () => {
     return (
         <div className="max-w-6xl mx-auto ">
+            <Helmet>
+                <title>Sunshine Wedding | About</title>
+            </Helmet>
             <div className="flex">
                 <div className="hero min-h-screen bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/Jyn9Dpd/couple-photo-shoot-wedding-day.jpg)' }}>
                     <div className="hero-overlay hover:bg-opacity-70 bg-opacity-40"></div>

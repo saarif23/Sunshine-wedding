@@ -44,7 +44,7 @@ const Router = createBrowserRouter([
             {
                 path: '/weddingPackage/:id',
                 element: <PrivateRoute><WeddingPackageDetails></WeddingPackageDetails></PrivateRoute>,
-                loader: () => fetch('data.json')
+                loader: () => fetch('/data.json')
             },
             {
                 path: "/signIn",
