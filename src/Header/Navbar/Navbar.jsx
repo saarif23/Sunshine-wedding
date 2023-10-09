@@ -38,13 +38,23 @@ const Navbar = () => {
                 <img className="w-36" src="https://i.ibb.co/z7BZBYQ/sunshine-wedding-low-resolution-color-logo.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 lg:text-xl"> 
+                <ul className="menu menu-horizontal px-1 lg:text-xl">
                     {navLinks}
                 </ul>
             </div>
             <div className="navbar-end">
                 {
-                    user ? <Link to="/signIn"><button onClick={handleLogout} className="btn btn-sm">Logout</button> </Link>: <Link to="/signIn"><button className="btn btn-sm">Contact</button></Link>
+                    user ?
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="m-1">
+                                <div ><img className="rounded-full w-12" src={user.photoURL} alt="userPhoto" /></div>
+                            </label>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu  shadow bg-base-100 rounded-box w-52 text-xl text-left">
+                                <li><button>{user.displayName}</button></li>
+                                <li><Link to="/signIn"> <button onClick={handleLogout}>Logout</button> </Link></li>
+                            </ul>
+                        </div>
+                        : <Link to="/signIn"><button className="btn btn-sm">Contact</button></Link>
                 }
             </div>
         </div>

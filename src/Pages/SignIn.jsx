@@ -16,9 +16,17 @@ const SignIn = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user)
+                swal("Good job!", "Sign In Successfully!", "success");
+                  //navigate after login
+                navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.error(error)
+                swal({
+                    title: "Error!",
+                    text: error.message,
+                    icon: "error",
+                });
             })
     }
     const handleLoginSubmit = (e) => {

@@ -7,12 +7,12 @@ import { Helmet } from "react-helmet-async";
 
 
 const SignUp = () => {
-    const { signUp } = useContext(AuthContext);
+    const { signUp, handleUpdateProfile } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const handleSignUpSubmit = (e) => {
         e.preventDefault();
-       
+
 
         const name = e.target.name.value;
         const photoUrl = e.target.photoUrl.value;
@@ -45,11 +45,23 @@ const SignUp = () => {
                 swal("Good job!", "Sign Up Successfully!", "success");
                 navigate("/")
                 e.target.reset();
+                handleUpdateProfile(name, photoUrl)
+                    .then(() => {
+                        swal("Good job!", "update profile successfully!", "success");
+                        navigate("/")
+                    })
+                    .catch(error => {
+                        swal({
+                            title: "Error!",
+                            text: error.message,
+                            icon: "error",
+                        });
+                    })
             })
             .catch(error => {
                 return swal({
                     title: "Error!",
-                    text: { error },
+                    text: error.message,
                     icon: "error",
                 });
             })
