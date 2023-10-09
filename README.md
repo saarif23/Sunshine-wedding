@@ -1,12 +1,7 @@
-# React + Vite
+# Wedding Event Management 
+# Sunshine wedding 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
+# This is all photos link that use the project
 https://i.ibb.co/G3yf0d9/1211.jpg
 https://i.ibb.co/rvjkw74/1212.jpg
 https://i.ibb.co/6D7nyQC/1213.jpg
@@ -39,7 +34,6 @@ https://i.ibb.co/TBrRpBb/summer-sun-portrait-cute-couple-having-romantic-vacatio
 https://i.ibb.co/BVRL6FH/asian-couple-beach.jpg
 
 
-
 https://i.ibb.co/Jyn9Dpd/couple-photo-shoot-wedding-day.jpg
 https://i.ibb.co/vz3X219/brunette-girl-red-buy-flowers-flower-store.jpg
 https://i.ibb.co/L9gXQMh/bearded-man-his-lovely-bride-pose-snow-magic-winter-forest-Copy.jpg
@@ -65,3 +59,11 @@ https://i.ibb.co/Jyn9Dpd/couple-photo-shoot-wedding-day.jpg
 https://i.ibb.co/vz3X219/brunette-girl-red-buy-flowers-flower-store.jpg
 https://i.ibb.co/L9gXQMh/bearded-man-his-lovely-bride-pose-snow-magic-winter-forest-Copy.jpg
 https://i.ibb.co/2sD2cCW/young-beautiful-newlyweds-smiling-laughing-sitting-swing-park-1.jpg
+
+
+# The Sunshine Wedding Project Features 
+- This project is responsive for small medium and large devices.
+- In this project i using multiple tools, css framework for styles, javaScript, sweet alert for notifications.
+- And also uses multiple reusable components, multiple hooks for easily updated and making that faster and more efficient.
+- In this project I uses firebase authentication `email, password`, `login with google`
+- This project when the user register and login our page  user will see our services details and our teams  and also our previous works
