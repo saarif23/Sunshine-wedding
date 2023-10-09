@@ -35,11 +35,11 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/photos',
-                element: <Photos></Photos>
+                element: <PrivateRoute> <Photos></Photos></PrivateRoute>
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <PrivateRoute><About></About></PrivateRoute>
             },
             {
                 path: '/weddingPackage/:id',

@@ -28,6 +28,11 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, googleProvider)
     }
 
+    // //update Profile 
+    // const updateProfile =()=>{
+    //     return up
+    // }
+
     //Sign out
     const logout = () => {
         setLoading(true)
@@ -44,6 +49,8 @@ const AuthProvider = ({ children }) => {
             unsubscribe;
         };
     }, []);
+
+
 
     //AuthContext Provider Value
     const authInfo = {
